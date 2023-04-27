@@ -4,7 +4,6 @@ import { UserCard } from "../userCard";
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
 
 export default function Login() {
-  // get session from next-auth
   const { data: session } = useSession();
   console.log(session);
 
