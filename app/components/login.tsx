@@ -1,7 +1,7 @@
 "use client";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { UserCard } from "../userCard";
-import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
 
 export default function Login() {
   // get session from next-auth
@@ -27,10 +27,10 @@ export default function Login() {
           <FaFacebookF className="text-sm" />
         </button>
         <button
-          onClick={() => signIn()}
+          onClick={() => signIn("github")}
           className="border-2 border-gray-200 rounded-full p-3 mx-1"
         >
-          <FaLinkedinIn className="text-sm" />
+          <FaGithub className="text-sm" />
         </button>
         <button
           onClick={() => signIn("google")}
