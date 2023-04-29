@@ -7,9 +7,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 const options = {
   providers: [
     GoogleProvider({
-      clientId:
-        "177087653868-inhkqpgo0ju00hnh9u487ve85lci98r0.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
     FaceBookProvider({
       clientId: "714388833791041",
