@@ -11,12 +11,12 @@ const options = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
     FaceBookProvider({
-      clientId: "714388833791041",
-      clientSecret: "24feaa226312e7b457dccce2bd6a77a1",
+      clientId: process.env.FACEBOOK_CLIENT_ID,
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     }),
     GithubProvider({
-      clientId: "c5aaff00bfea77b7a473",
-      clientSecret: "e13b3dd0e5e35e903c860d75653419830aee1807",
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
 };
