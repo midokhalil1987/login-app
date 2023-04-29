@@ -2,8 +2,9 @@ import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import FaceBookProvider from "next-auth/providers/facebook";
 import GithubProvider from "next-auth/providers/github";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default NextAuth({
+const options = {
   providers: [
     GoogleProvider({
       clientId:
@@ -19,4 +20,7 @@ export default NextAuth({
       clientSecret: "e13b3dd0e5e35e903c860d75653419830aee1807",
     }),
   ],
-});
+};
+
+export default (req: NextApiRequest, res: NextApiResponse) =>
+  NextAuth(req, res, options);
